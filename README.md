@@ -14,12 +14,6 @@ React Web App (front-end) with Node/Express proxy server (back-end) connected to
 #### Homepage
 ![Homepage screenshot](./public/images/homepage.png?raw=true "Homepage")
 
-#### Dashboard *(Actual Company Information Blurred)*
-![Dashboard screenshot](./public/images/dashboard.png?raw=true "Dashboard")
-
-#### Account Page *(Actual Company and Contact Information Blurred)*
-![Account Page screenshot](./public/images/account-page.png?raw=true "Account Page")
-
 ## Reflection
 
 #### Biggest Learnings

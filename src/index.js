@@ -10,7 +10,7 @@ app.listen(port, () => {
     console.log(`server is running on port ${port}`)
 })
 
-app.use('/api/yelp', require('./routes/yelpApi'))
+app.use('/api/yelp/', require('./routes/yelpApi'))
 
 app.get('/', (req, res) => {
     res.send('main app')

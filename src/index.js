@@ -6,11 +6,12 @@ const express = require('express');
 const app = express();
 const axios = require('axios');
 
-//app.use('/api/yelp', require('./routes/api/yelp'))
-
 app.listen(port, () => {
     console.log(`server is running on port ${port}`)
 })
+
+app.use('/api/yelp', require('./routes/yelpApi'))
+
 
 app.get('/', (req, res) => {
     res.send('main app')

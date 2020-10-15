@@ -12,9 +12,6 @@ app.listen(port, () => {
 
 app.use('/api/yelp', require('./routes/yelpApi'))
 
-
 app.get('/', (req, res) => {
     res.send('main app')
  })
-
-

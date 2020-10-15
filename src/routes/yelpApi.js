@@ -3,17 +3,10 @@ const port = process.env.PORT || 3001;
 const yelpApi = process.env.YELP_API_KEY;
 
 const express = require('express');
+const router = express.Router();
 const app = express();
 const axios = require('axios');
 
-//app.use('/api/yelp', require('./routes/api/yelp'))
+router.get('/', (req, res))
 
-app.listen(port, () => {
-    console.log(`server is running on port ${port}`)
-})
-
-app.get('/', (req, res) => {
-    res.send('main app')
- })
-
-
+module.exports = router;

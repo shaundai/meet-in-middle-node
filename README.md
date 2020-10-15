@@ -6,6 +6,9 @@ React Web App (front-end) with Node/Express proxy server (back-end) connected to
 
 ## Purpose
 
+Allows users who are in two different locations to find a location to get together that's in the middle based on latitude and longitude, traffic conditions, and travel time.
+
+
 #### Live project
 
 

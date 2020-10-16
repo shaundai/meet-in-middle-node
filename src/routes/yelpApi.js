@@ -6,16 +6,21 @@ const router = express.Router();
 const app = express();
 const axios = require('axios');
 
-router.get('/:sortby', (req, res) => {
+router.get('/', (req, res) => {
+    res.send('yelp side')
+})
+
+router.get('/businesses/list', (req, res) => {
     const searchTerm = req.query.searchterm
-    const searchLocation = req.query.searchLocation
+    const searchLocation = req.query.searchlocation
+    const sortBy = req.query.sortby
     return axios({
         method: 'get',
         url: `https://api.yelp.com/v3/businesses/search`,
         params: {
             term: searchTerm,
             location: searchLocation,
-            sort_by: req.params.sortby,
+            sort_by: sortBy,
         },
         headers: {
             Authorization: `Bearer ${yelpApi}`

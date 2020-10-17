@@ -2,7 +2,7 @@
 
 #### Full-Stack Web App connected to Yelp API
 
-React Web App (front-end) with Node/Express proxy server (back-end) connected to Yelp API.
+React Web App (front-end) with Node/Express proxy server (back-end) connected to Yelp REST API and Google REST API.
 
 ## Purpose
 

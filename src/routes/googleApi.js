@@ -10,17 +10,13 @@ router.get('/', (req, res) => {
     res.send('google side')
 })
 
-router.get('/businesses/list', (req, res) => {
-    const searchTerm = req.query.searchterm
-    const searchLocation = req.query.searchlocation
-    const sortBy = req.query.sortby
+router.get('/distance', (req, res) => {
+    const searchOrigins = req.query.searchorigins
     return axios({
         method: 'get',
-        url: `https://api.yelp.com/v3/businesses/search`,
+        url: `https://maps.googleapis.com/maps/api/distancematrix/outputFormat?parameters`,
         params: {
-            term: searchTerm,
-            location: searchLocation,
-            sort_by: sortBy,
+            origins: searchOrigins
         },
         headers: {
             Authorization: `Bearer ${yelpApi}`

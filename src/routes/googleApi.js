@@ -1,9 +1,8 @@
 require("dotenv").config();
-const yelpApi = process.env.YELP_API_KEY;
+const googleApi = process.env.GOOGLE_API_KEY;
 
 const express = require('express');
 const router = express.Router();
-const app = express();
 const axios = require('axios');
 
 router.get('/', (req, res) => {
@@ -16,10 +15,8 @@ router.get('/distance', (req, res) => {
         method: 'get',
         url: `https://maps.googleapis.com/maps/api/distancematrix/outputFormat?parameters`,
         params: {
-            origins: searchOrigins
-        },
-        headers: {
-            Authorization: `Bearer ${yelpApi}`
+            origins: searchOrigins,
+            key: googleApi,
         }
     }).then((response) => {
         res.json(response.data)

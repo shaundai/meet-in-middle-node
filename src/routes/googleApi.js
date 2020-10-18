@@ -11,12 +11,15 @@ router.get('/', (req, res) => {
 
 router.get('/distance', (req, res) => {
     const searchOrigins = req.query.searchorigins
+    const searchDestinations = req.query.searchdestinations
     return axios({
         method: 'get',
-        url: `https://maps.googleapis.com/maps/api/distancematrix/outputFormat?parameters`,
+        url: `https://maps.googleapis.com/maps/api/distancematrix/json`,
         params: {
             origins: searchOrigins,
+            destinations: searchDestinations,
             key: googleApi,
+            units: 'imperial'
         }
     }).then((response) => {
         res.json(response.data)
